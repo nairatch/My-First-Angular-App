@@ -1,0 +1,19 @@
+main {
+  h1 {
+    &::after {
+      content: "!";
+    }
+    span {
+      &.name {
+        color: steelblue;
+        font-weight: 700;
+      }
+    }
+  }
+  img {
+    margin-top: 3rem;
+
+    width: 130px;
+    height: 130px;
+  }
+}

@@ -1,0 +1,32 @@
+<main class="container-xxl m-auto pt-3">
+<h1>This is my First <span class="name">{{name}}</span> with Angular</h1>
+<hr />
+<div>
+    <button class="btn btn-primary" (click)="updateName()">
+        Update Random Title 
+    </button>
+   
+</div>
+<img [src]="imageDetails.src" alt="{{ imageDetails.alt}} image">
+<div class="mb-3">
+    <label for="imageSrc" class="form-label">Image Source</label>
+   <!-- <input
+      type="url"
+      class="form-control"
+      placeholder="Enter image url"
+      id="imageSrc"
+      name="imageSrc"
+      (keyup)="onImageChange($event)"
+    /> -->
+    <input
+      type="url"
+      class="form-control"
+      placeholder="Enter image url"
+      id="imageSrc"
+      name="imageSrc"
+      [(ngModel)]="imageDetails.src"
+    />
+</div>
+<button class="btn btn-warning" (click)="resetImage()">Reset Image</button>
+<app-home></app-home>
+</main>
